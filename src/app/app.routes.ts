@@ -14,6 +14,6 @@ export const routes: Routes = [
     {path: 'login', component: Login},
     {path: 'tasks', component: Tasks},
     {path: 'logout', component: Logout},
-    {path: '', redirectTo: '/tasks', pathMatch: 'full'},
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: '**', component: Notfound}
 ];
