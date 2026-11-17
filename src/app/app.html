@@ -1,4 +1,6 @@
 <app-navbar></app-navbar>
 <app-login></app-login>
-<router-outlet />
+<div class="container">
+    <router-outlet [routerOutletData]="title"></router-outlet>
+</div>
 <app-footer [company]="cmpny" [author]="athr"></app-footer>

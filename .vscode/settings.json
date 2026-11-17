@@ -1,0 +1,73 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "TaskManagerAngular\\src\\app\\",
+            "color": "foldercolorizer.color_0087af"
+        }
+    ],
+    "rashidFolderColors.folders": {
+        "src/app": "red",
+        "src/components/footer": "orange",
+        "src/components/home": "yellow",
+        "src/components/login": "green",
+        "src/components/logout": "teal",
+        "src/components/navbar": "blue",
+        "src/components/notfound": "purple",
+        "src/components/profile": "pink",
+        "src/components/registration": "gray",
+        "src/components/tasks": "red",
+        "src/components": "blue"
+    },
+    "folder-customization.folders": [
+        {
+            "path": "TaskManagerAngular\\src\\app\\",
+            "color": "foldercustomization.AnsiColor14",
+            "badge": "😀"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\footer\\",
+            "color": "foldercustomization.AnsiColor12",
+            "badge": "😆"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\home\\",
+            "color": "foldercustomization.AnsiColor118",
+            "badge": "😅"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\login\\",
+            "color": "foldercustomization.AnsiColor88",
+            "badge": "🤣"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\logout\\",
+            "color": "foldercustomization.AnsiColor198",
+            "badge": "🙃"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\navbar\\",
+            "color": "foldercustomization.AnsiColor220",
+            "badge": "😉"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\notfound\\",
+            "color": "foldercustomization.AnsiColor167",
+            "badge": "🥰"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\profile\\",
+            "color": "foldercustomization.AnsiColor155",
+            "badge": "😇"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\registration\\",
+            "color": "foldercustomization.AnsiColor57",
+            "badge": "😍"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\tasks\\",
+            "color": "foldercustomization.AnsiColor36",
+            "badge": "🤩"
+        }
+    ]
+}
