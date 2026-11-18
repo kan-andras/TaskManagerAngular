@@ -1,5 +1,7 @@
+<app-header [appTitle]="title()"></app-header>
 <app-navbar></app-navbar>
 <div class="container">
+    <app-message></app-message>
     <router-outlet [routerOutletData]="title()"></router-outlet>
 </div>
 <app-footer [company]="cmpny" [author]="athr"></app-footer>

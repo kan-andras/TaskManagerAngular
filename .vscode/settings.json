@@ -68,6 +68,15 @@
             "path": "TaskManagerAngular\\src\\components\\tasks\\",
             "color": "foldercustomization.AnsiColor36",
             "badge": "🤩"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\components\\header\\",
+            "color": "foldercustomization.AnsiColor159",
+            "badge": "😴"
+        },
+        {
+            "path": "TaskManagerAngular\\src\\app\\services\\",
+            "color": "foldercustomization.AnsiColor106"
         }
     ]
 }
