@@ -1,6 +1,22 @@
-<div *ngIf="message" class="alert alert-{{message.type === 'error' ? 'danger' : message.type}} alert-dismissible fade show" role="alert">
-  <strong>{{message.title}}</strong>
-  <br>
-  {{message.message}}
+@if (message; as Msg) {
+<div class="alert alert-{{message.type === 'error' ? 'danger' : message.type}} alert-dismissible fade show" role="alert">
+  @if(message.icon) {
+    <div class="row">
+      <div class="col-2">
+          <i class="bi {{message.icon}}"></i>
+        </div>
+        <div class="col-10">
+        <strong>{{message.title}}</strong>
+        <br>
+        {{message.message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+  }
+  @else {
+    <strong>{{message.title}}</strong>
+    {{message.message}}
+  }
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+  </div>
+}

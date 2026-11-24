@@ -8,9 +8,8 @@ import { MessageService } from '../../app/services/message';
   templateUrl: './login.html',
 })
 export class Login {
-
   constructor(private messageService: MessageService){}
   login() {
-    this.messageService.show('success', 'Login Successful', 'You have successfully logged in.');
+    this.messageService.show('error', 'Login Error', 'Invalid email or password', 'bi-exclamation-triangle');
   }
 }
