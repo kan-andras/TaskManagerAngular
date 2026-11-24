@@ -26,17 +26,17 @@ export class Registration {
 
   register() {
     if (!this.user.name || !this.user.email || !this.user.password || !this.user.confirm) {
-      this.messageService.show('error', 'Hiányzó adat', 'Tölts ki minden mezőt.', 'exclamation-circle');
+      this.messageService.show('error', 'Hiányzó adat', 'Tölts ki minden mezőt.', 'bi-exclamation-circle');
       return;
     }
 
     this.apiService.register('users', this.user).subscribe({
       next: () => {
-        this.messageService.show('success', 'Sikeres regisztráció', 'A regisztráció sikeresen megtörtént.', 'check-circle');
+        this.messageService.show('success', 'Sikeres regisztráció', 'A regisztráció sikeresen megtörtént.', 'bi-check-circle');
       },
       error: (error) => {
         const detail = error.error?.error;
-        this.messageService.show('error', 'Hiba a regisztráció során', detail || 'A regisztráció sikertelen volt. Kérlek próbáld újra.', 'exclamation-circle');
+        this.messageService.show('error', 'Hiba a regisztráció során', detail || 'A regisztráció sikertelen volt. Kérlek próbáld újra.', 'bi-exclamation-circle');
       }
     });
   }
