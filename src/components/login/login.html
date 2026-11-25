@@ -1,11 +1,11 @@
 <div class="col-lg-6 offset-lg-3">
   <h3>login</h3>
   <div class="form-floating mb-3">
-    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="existuser.email">
     <label for="floatingInput">Email address</label>
   </div>
   <div class="form-floating mb-3">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="existuser.password">
     <label for="floatingPassword">Password</label>
   </div>
   <button type="submit" class="btn btn-primary" (click)="login()">Login</button>

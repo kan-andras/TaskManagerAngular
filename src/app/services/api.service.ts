@@ -20,7 +20,7 @@ export class ApiService {
     }
 
     login(table: string, data: object){
-      return this.http.post(`${this.server}/${table}/login`, data);
+      return this.http.post<{ token: string }>(`${this.server}/${table}/login`, data);
     }
 
     register(table: string, data: object){

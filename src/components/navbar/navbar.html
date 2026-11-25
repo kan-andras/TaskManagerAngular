@@ -1,11 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="#" routerLinkActive="active">Navbar</a>
+    <a class="navbar-brand" routerLink="#" routerLinkActive="active">Navbar
+      @if(isLoggedIn){
+        -{{loggedUser}}
+      }
+      @else {
+        -kijelenkezve
+      }
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+        @if (!isLoggedIn){
         <li class="nav-item">
           <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
         </li>
@@ -15,6 +23,8 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/registration" routerLinkActive="active">Registration</a>
         </li>
+        }
+        @else {
         <li class="nav-item">
           <a class="nav-link" routerLink="/tasks" routerLinkActive="active">My tasks</a>
         </li>
@@ -24,6 +34,8 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/logout" routerLinkActive="active">Logout</a>
         </li>
+        }
+        
       </ul>
     </div>
   </div>

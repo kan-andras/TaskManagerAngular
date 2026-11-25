@@ -1,9 +1,9 @@
 export interface User {
     ID: number;
-    username: string;
+    name: string;
     email: string;
     password: string;
-    confirmedPassword?: string;
+    confirm?: string;
     role: 'admin' | 'user';
     created_at?: string;
     updated_at?: string;

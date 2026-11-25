@@ -3,25 +3,31 @@ import { MessageService } from '../../app/services/message';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../app/services/api.service';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+import { User } from '../../app/interfaces/user';
 
 @Component({
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   selector: 'app-registration',
   styleUrl: './registration.scss',
   templateUrl: './registration.html',
 })
 export class Registration {
 
-  user = {
+  user: User = {
+    ID: 0,
     name: '',
     email: '',
     password: '',
     confirm: '',
+    role: 'user',
   };
 
   constructor(
     private messageService: MessageService,
-    private apiService: ApiService
+    private ApiService: ApiService,
+    private router: Router
   ) {}
 
   register() {
@@ -30,9 +36,11 @@ export class Registration {
       return;
     }
 
-    this.apiService.register('users', this.user).subscribe({
+    this.ApiService.register('users', this.user).subscribe({
       next: () => {
         this.messageService.show('success', 'Sikeres regisztráció', 'A regisztráció sikeresen megtörtént.', 'bi-check-circle');
+        this.user = { ID: 0, name: '', email: '', password: '', confirm: '', role: 'user' };
+        this.router.navigate(['login']);
       },
       error: (error) => {
         const detail = error.error?.error;
